@@ -4,6 +4,8 @@ Public Class frmSpin
     Dim y As Integer = 19
     Dim z As Double
     Dim bee As Integer = 0
+    Dim thing1 As Integer = Int((19 * Rnd()) + 1)
+    Dim snail As Boolean = False
 
 
     Private Sub snails(x)
@@ -51,39 +53,50 @@ Public Class frmSpin
             picCircle.Image = My.Resources.Untitled_design__20_
         End If
 
+        If snail = True Then
+            If x = 1 Then
+                picCircle.Image = My.Resources.Win1
+            ElseIf x = 13 Then
+                picCircle.Image = My.Resources.Win13
+            End If
+        End If
     End Sub
+
     Private Sub frmSpin_Load(sender As Object, e As EventArgs) Handles Me.Load
         Timer1.Interval = 50
-        Timer2.Interval = 3000
-
+        Timer2.Interval = 800
+        snail = False
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim thing1 As Integer
-        thing1 = Int(Rnd() * 19)
+        Dim pictureval As Integer
+        pictureval = y Mod 20
+        snails(pictureval)
+        Label3.Text = thing1
+        Label2.Text = pictureval
         If bee > 6 Then
-            If z = thing1 Then
+            If pictureval = thing1 Then
+                snail = True
                 snails(thing1)
                 Timer1.Enabled = False
                 Timer2.Enabled = False
+
             End If
         End If
         y += 1
         Label1.Text = y.ToString
         z = y Mod 2
-        Dim pictureval As Integer
 
-        pictureval = y Mod 20
-        snails(pictureval)
-        Label2.Text = pictureval.ToString
+
 
         If bee = 1 Then
             Timer1.Interval = 100
-            Timer2.Interval = 1000
+            Timer2.Interval = 500
         ElseIf bee = 4 Then
-            Timer1.Interval = 300
+            Timer1.Interval = 150
+            Timer2.Interval = 200
         ElseIf bee = 6 Then
-            Timer1.Interval = 400
+            Timer1.Interval = 175
         End If
 
 
@@ -98,18 +111,6 @@ Public Class frmSpin
         'Label1.Text = y.ToString
         bee += 1
 
-        'Dim pictureval As Integer
-        'pictureval = y Mod 20
-        'snails(pictureval)
-        'If y > 45 Then
-        '    Timer2.Interval = 100
-        'ElseIf y > 78 Then
-        '    Timer2.Interval = 200
-        'ElseIf y > 100 Then
-        '    Timer2.Interval = 1000
-        'ElseIf y > 200 Then
-        '    Timer2.Interval = 3000
-        'End If
 
     End Sub
 End Class

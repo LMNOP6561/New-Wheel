@@ -129,7 +129,9 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Win1.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled design %2820%29.png" />
   </ItemGroup>
@@ -192,6 +194,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled design %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win13.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
