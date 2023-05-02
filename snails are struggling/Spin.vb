@@ -3,6 +3,7 @@ Public Class frmSpin
 
     Dim y As Integer = 19
     Dim z As Double
+    Dim bee As Integer = 0
 
 
     Private Sub snails(x)
@@ -52,31 +53,62 @@ Public Class frmSpin
 
     End Sub
     Private Sub frmSpin_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Timer1.Interval = 100
+        Timer1.Interval = 50
+        Timer2.Interval = 3000
 
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim thing1 As Integer
+        thing1 = Int(Rnd() * 19)
+        If bee > 6 Then
+            If z = thing1 Then
+                snails(thing1)
+                Timer1.Enabled = False
+                Timer2.Enabled = False
+            End If
+        End If
         y += 1
         Label1.Text = y.ToString
         z = y Mod 2
-        Dim thing1 As Integer
-        thing1 = Int(Rnd() * 101 + 50)
         Dim pictureval As Integer
 
         pictureval = y Mod 20
         snails(pictureval)
         Label2.Text = pictureval.ToString
 
-
+        If bee = 1 Then
+            Timer1.Interval = 100
+            Timer2.Interval = 1000
+        ElseIf bee = 4 Then
+            Timer1.Interval = 300
+        ElseIf bee = 6 Then
+            Timer1.Interval = 400
+        End If
 
 
         'If z = 0 Then
-        '    For i As Integer = 0 To thing1
-        '        pictureval = i Mod 25
-        '        snails(pictureval)
-        '        Label2.Text = pictureval.ToString
-        '    Next i
+
+        'End If
+
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        'y += 1
+        'Label1.Text = y.ToString
+        bee += 1
+
+        'Dim pictureval As Integer
+        'pictureval = y Mod 20
+        'snails(pictureval)
+        'If y > 45 Then
+        '    Timer2.Interval = 100
+        'ElseIf y > 78 Then
+        '    Timer2.Interval = 200
+        'ElseIf y > 100 Then
+        '    Timer2.Interval = 1000
+        'ElseIf y > 200 Then
+        '    Timer2.Interval = 3000
         'End If
 
     End Sub
