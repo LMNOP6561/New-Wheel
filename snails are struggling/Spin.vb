@@ -3,8 +3,7 @@ Public Class frmSpin
 
     Dim y As Integer = 19
     Dim z As Double
-    Dim bee As Integer = 0
-    Dim thing1 As Integer = Int((20 * Rnd()))
+    Dim thing1 As Integer = Int((19 * Rnd()))
     Dim snail As Boolean = False
     Private Sub snails(x)
         If x = 0 Then
@@ -62,7 +61,6 @@ Public Class frmSpin
 
     Private Sub frmSpin_Load(sender As Object, e As EventArgs) Handles Me.Load
         Timer1.Interval = 50
-        Timer2.Interval = 800
         snail = False
     End Sub
 
@@ -72,7 +70,7 @@ Public Class frmSpin
         snails(pictureval)
         Label3.Text = thing1
         Label2.Text = pictureval
-        If bee > 3 Then
+        If y > 40 Then
             If pictureval = thing1 Then
                 snail = True
                 snails(thing1)
@@ -85,20 +83,13 @@ Public Class frmSpin
         Label1.Text = y.ToString
         z = y Mod 2
 
-
-        If bee = 1 Then
+        If y = 30 Then
             Timer1.Interval = 100
-            Timer2.Interval = 500
-        ElseIf bee = 4 Then
+        ElseIf y = 40 Then
             Timer1.Interval = 150
-            Timer2.Interval = 200
-        ElseIf bee = 6 Then
+        ElseIf y >= 60 Then
             Timer1.Interval = 175
         End If
     End Sub
 
-    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        bee += 1
-
-    End Sub
 End Class
