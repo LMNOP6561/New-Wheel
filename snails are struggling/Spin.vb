@@ -3,7 +3,7 @@ Public Class frmSpin
 
     Dim y As Integer = 19
     Dim z As Double
-    Dim thing1 As Integer = Int((19 * Rnd()))
+    Dim thing1 As Integer = Int()
     Dim snail As Boolean = False
     Private Sub snails(x)
         If x = 0 Then
@@ -51,10 +51,49 @@ Public Class frmSpin
         End If
 
         If snail = True Then
-            If x = 1 Then
+            If x = 0 Then
                 picCircle.Image = My.Resources.Win1
+            ElseIf x = 2 Then
+                picCircle.Image = My.Resources.Win2
+            ElseIf x = 3 Then
+                picCircle.Image = My.Resources.Win3
+            ElseIf x = 4 Then
+                picCircle.Image = My.Resources.Win4
+            ElseIf x = 5 Then
+                picCircle.Image = My.Resources.Win5
+            ElseIf x = 6 Then
+                picCircle.Image = My.Resources.Win6
+            ElseIf x = 7 Then
+                picCircle.Image = My.Resources.Win7
+            ElseIf x = 8 Then
+                picCircle.Image = My.Resources.Win8
+            ElseIf x = 9 Then
+                picCircle.Image = My.Resources.Win9
+            ElseIf x = 10 Then
+                picCircle.Image = My.Resources.Win10
+            ElseIf x = 11 Then
+                picCircle.Image = My.Resources.Win11
+            ElseIf x = 12 Then
+                picCircle.Image = My.Resources.Win12
             ElseIf x = 13 Then
                 picCircle.Image = My.Resources.Win13
+            ElseIf x = 14 Then
+                picCircle.Image = My.Resources.Win14
+            ElseIf x = 15 Then
+                picCircle.Image = My.Resources.Win15
+            ElseIf x = 16 Then
+                picCircle.Image = My.Resources.Win16
+            ElseIf x = 17 Then
+                picCircle.Image = My.Resources.Win17
+            ElseIf x = 18 Then
+                picCircle.Image = My.Resources.Win18
+            ElseIf x = 19 Then
+                picCircle.Image = My.Resources.Win19
+            ElseIf x = 20 Then
+                picCircle.Image = My.Resources.Win20
+
+
+
             End If
         End If
     End Sub

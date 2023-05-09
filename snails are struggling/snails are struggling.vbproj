@@ -196,7 +196,61 @@
     <None Include="Resources\Untitled design %282%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Win2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win12.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Win13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
