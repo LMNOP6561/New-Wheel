@@ -223,8 +223,5 @@ Public Class frmWheel
         Me.Close()
     End Sub
 
-    Private Sub frmWheel_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        Timer2.Enabled = False
 
-    End Sub
 End Class
