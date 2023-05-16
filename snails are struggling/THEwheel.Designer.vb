@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmSpin
+Partial Class frmWheel
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,21 +25,19 @@ Partial Class frmSpin
         Me.components = New System.ComponentModel.Container()
         Me.picCircle = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblYvalue = New System.Windows.Forms.Label()
         CType(Me.picCircle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'picCircle
         '
         Me.picCircle.Image = Global.snails_are_struggling.My.Resources.Resources.Untitled_design__20_
-        Me.picCircle.Location = New System.Drawing.Point(54, 12)
+        Me.picCircle.Location = New System.Drawing.Point(36, 12)
         Me.picCircle.Name = "picCircle"
-        Me.picCircle.Size = New System.Drawing.Size(464, 365)
+        Me.picCircle.Size = New System.Drawing.Size(471, 404)
         Me.picCircle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picCircle.TabIndex = 0
+        Me.picCircle.TabIndex = 1
         Me.picCircle.TabStop = False
         '
         'Timer1
@@ -47,48 +45,29 @@ Partial Class frmSpin
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Snails"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(31, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Bees"
-        '
         'Timer2
         '
-        Me.Timer2.Enabled = True
+        Me.Timer2.Interval = 2000
         '
-        'Label3
+        'lblYvalue
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 71)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 13)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Bees"
+        Me.lblYvalue.AutoSize = True
+        Me.lblYvalue.Location = New System.Drawing.Point(12, 419)
+        Me.lblYvalue.Name = "lblYvalue"
+        Me.lblYvalue.Size = New System.Drawing.Size(35, 13)
+        Me.lblYvalue.TabIndex = 2
+        Me.lblYvalue.Text = "Snails"
         '
-        'frmSpin
+        'frmWheel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(553, 391)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(542, 457)
+        Me.Controls.Add(Me.lblYvalue)
         Me.Controls.Add(Me.picCircle)
-        Me.Name = "frmSpin"
-        Me.Text = "Spin"
+        Me.Name = "frmWheel"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "THEwheel"
         CType(Me.picCircle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -97,8 +76,6 @@ Partial Class frmSpin
 
     Friend WithEvents picCircle As PictureBox
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblYvalue As Label
 End Class
