@@ -132,6 +132,7 @@ Public Class frmWheel
         Timer1.Interval = 50
         snail = False
         thing1 = thing2.Next(19)
+        y = Int(frmMain.lblY.Text) Mod 20
 
 
     End Sub
@@ -139,7 +140,7 @@ Public Class frmWheel
 
         y += 1
         pictureval = y Mod 20
-        lblYvalue.Text = y
+
         snails(pictureval)
 
         If y > 40 Then
@@ -147,7 +148,6 @@ Public Class frmWheel
                 snail = True
                 snails(thing1)
                 Timer1.Enabled = False
-
                 Timer2.Enabled = True
             End If
         End If
@@ -163,7 +163,7 @@ Public Class frmWheel
             Timer1.Interval = 175
         End If
 
-
+        frmMain.lblY.Text = y
 
     End Sub
 

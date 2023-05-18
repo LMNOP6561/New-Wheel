@@ -22,9 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblY = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -88,32 +86,15 @@ Partial Class frmMain
         Me.GroupBox6.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblY
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Snails"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(53, 24)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(31, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Bees"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 397)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 13)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Bees"
+        Me.lblY.AutoSize = True
+        Me.lblY.Location = New System.Drawing.Point(25, 266)
+        Me.lblY.Name = "lblY"
+        Me.lblY.Size = New System.Drawing.Size(19, 13)
+        Me.lblY.TabIndex = 3
+        Me.lblY.Text = "19"
+        Me.lblY.Visible = False
         '
         'MenuStrip1
         '
@@ -597,13 +578,14 @@ Partial Class frmMain
         '
         'lblState
         '
-        Me.lblState.AutoSize = True
+        Me.lblState.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblState.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblState.Location = New System.Drawing.Point(181, 48)
+        Me.lblState.Location = New System.Drawing.Point(11, 48)
         Me.lblState.Name = "lblState"
-        Me.lblState.Size = New System.Drawing.Size(123, 25)
+        Me.lblState.Size = New System.Drawing.Size(468, 25)
         Me.lblState.TabIndex = 39
         Me.lblState.Text = "New Game!"
+        Me.lblState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lstClues
         '
@@ -612,11 +594,12 @@ Partial Class frmMain
         Me.lstClues.Name = "lstClues"
         Me.lstClues.Size = New System.Drawing.Size(120, 95)
         Me.lstClues.TabIndex = 39
+        Me.lstClues.Visible = False
         '
         'btnSolve
         '
         Me.btnSolve.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSolve.Location = New System.Drawing.Point(272, 276)
+        Me.btnSolve.Location = New System.Drawing.Point(219, 276)
         Me.btnSolve.Name = "btnSolve"
         Me.btnSolve.Size = New System.Drawing.Size(87, 29)
         Me.btnSolve.TabIndex = 40
@@ -627,7 +610,7 @@ Partial Class frmMain
         'btnGive
         '
         Me.btnGive.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnGive.Location = New System.Drawing.Point(395, 276)
+        Me.btnGive.Location = New System.Drawing.Point(332, 276)
         Me.btnGive.Name = "btnGive"
         Me.btnGive.Size = New System.Drawing.Size(87, 29)
         Me.btnGive.TabIndex = 41
@@ -649,9 +632,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.gboLetters)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.btnSpin)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblY)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
@@ -668,14 +649,11 @@ Partial Class frmMain
         Me.GroupBox3.ResumeLayout(False)
         Me.gboLetters.ResumeLayout(False)
         Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblY As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FilesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnQ As Button

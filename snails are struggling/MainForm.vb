@@ -43,7 +43,7 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
-
+        frmWheel.Timer1.Enabled = False
         btnNew.Enabled = False
         For Each button As Button In gboLetters.Controls.OfType(Of Button)
             If TypeOf button Is Button Then
@@ -81,7 +81,7 @@ Public Class frmMain
         lstindex = (lstClues.Items.Count)
         Dim phrasevalue As Integer = thing1.Next(lstindex)
         lstClues.SelectedIndex = phrasevalue
-        Label1.Text = phrasevalue
+
         btnNew.Enabled = True
         btnSpin.Enabled = False
         gboLetters.Enabled = False
@@ -99,7 +99,6 @@ Public Class frmMain
 
         Dim counter As Integer
 
-        Label2.Text = lstClues.SelectedItem
         Clue = lstClues.SelectedItem.toupper
 
 
@@ -152,13 +151,13 @@ Public Class frmMain
         ElseIf Clue.Contains(sender.text) = False Then
             If gboPlayer1.Enabled = True Then
                 lblScore1.Text = "$0.00"
-                btnGive.Location = New Point(144, 276)
+
                 gboPlayer1.Enabled = False
                 gboPlayer2.Enabled = True
                 btnSpin.Enabled = True
             Else
                 lblScore2.Text = "$0.00"
-                btnGive.Location = New Point(87, 29)
+
                 gboPlayer2.Enabled = False
                 gboPlayer1.Enabled = True
                 btnSpin.Enabled = True
@@ -228,7 +227,6 @@ Public Class frmMain
 
     Private Sub btnGive_Click(sender As Object, e As EventArgs) Handles btnGive.Click
         MsgBox(Clue)
-        reset()
 
     End Sub
 End Class
